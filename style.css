@@ -1,0 +1,389 @@
+# Weather Dashboard CSS
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Nunito', sans-serif;
+    background: linear-gradient(135deg, #FCE7F3, #EDE9FE);
+    color: #49344F;
+    min-height: 100vh;
+}
+
+.dashboard {
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #7C3AED;
+}
+
+header p {
+    color: #6B5B75;
+}
+
+.search-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+select,
+button {
+    padding: 12px 18px;
+    border-radius: 10px;
+    border: 1px solid #CDB4DB;
+    font-size: 16px;
+}
+
+button {
+    background-color: #A78BFA;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #8B5CF6;
+}
+
+button:active {
+    background-color: #7C3AED;
+}
+
+.weather-card {
+    background: white;
+    border-radius: 20px;
+    padding: 35px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(73, 52, 79, 0.12);
+    margin-bottom: 35px;
+}
+
+.weather-card h2 {
+    font-size: 28px;
+}
+
+#weather-icon {
+    font-size: 65px;
+    margin: 15px 0;
+}
+
+#temperature {
+    font-size: 54px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+#conditions {
+    font-size: 20px;
+}
+
+.forecast-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.forecast-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(73, 52, 79, 0.1);
+}
+
+.forecast-card img {
+    width: 70px;
+    height: 70px;
+}
+
+.forecast-card h3 {
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #6B5B75;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 36px;
+    }
+
+    .weather-card {
+        padding: 20px;
+    }
+
+    #temperature {
+        font-size: 42px;
+    }
+
+    .search-section {
+        flex-direction: column;
+    }
+
+    select,
+    button {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+/* Whimsical typography */
+h1, h2, h3, button {
+    font-family: 'Fredoka', sans-serif;
+}
+
+header h1 {
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+/* Softer, playful cards */
+.weather-card,
+.forecast-card {
+    border: 2px solid rgba(205, 180, 219, 0.35);
+    border-radius: 28px;
+}
+
+.weather-card {
+    background: linear-gradient(145deg, #FFFFFF, #FFF8FD);
+}
+
+/* Cute interactive button */
+button {
+    border-radius: 16px;
+    font-weight: 500;
+    box-shadow: 0 4px 0 #8B5CF6;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 0 #8B5CF6;
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #8B5CF6;
+}
+
+/* Rounded dropdown */
+select {
+    font-family: 'Nunito', sans-serif;
+    border-radius: 16px;
+    background-color: white;
+}
+
+
+/* WeatherWise dashboard redesign */
+
+.dashboard {
+    max-width: 1200px;
+    margin: 25px auto;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    font-size: 42px;
+}
+
+.dashboard-header p {
+    margin: 8px 0;
+}
+
+.header-decoration {
+    font-size: 32px;
+}
+
+.search-section {
+    justify-content: flex-start;
+    margin-bottom: 25px;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 24px;
+    align-items: stretch;
+}
+
+.dashboard-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.welcome-card,
+.details-card {
+    background: white;
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 0 8px 25px rgba(73, 52, 79, 0.08);
+}
+
+.eyebrow {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #9B7AC8;
+}
+
+.welcome-card h2 {
+    font-size: 27px;
+    margin: 8px 0;
+}
+
+.welcome-card p:last-child {
+    margin-bottom: 0;
+}
+
+.forecast-section {
+    background: #F3F1FF;
+    padding: 22px;
+    border-radius: 24px;
+}
+
+.forecast-section h2 {
+    text-align: left;
+    font-size: 23px;
+    margin: 0 0 18px;
+}
+
+.forecast-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.forecast-card {
+    padding: 14px 8px;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(73, 52, 79, 0.06);
+    overflow-wrap: anywhere;
+}
+
+.forecast-card h3 {
+    font-size: 15px;
+    margin: 0 0 8px;
+}
+
+.forecast-card img {
+    width: 52px;
+    height: 52px;
+}
+
+.forecast-card p {
+    font-size: 13px;
+    margin: 7px 0;
+}
+
+.details-card h2 {
+    margin-top: 0;
+    font-size: 22px;
+}
+
+.weather-card {
+    background: linear-gradient(155deg, #A9C5FF, #849FF4, #B4A1EF);
+    color: white;
+    margin-bottom: 0;
+    padding: 35px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 480px;
+    border: none;
+    border-radius: 28px;
+}
+
+.weather-card h2 {
+    color: white;
+    font-size: 25px;
+}
+
+#weather-icon {
+    font-size: 90px;
+    margin: 20px 0;
+}
+
+#temperature {
+    font-size: 76px;
+    margin: 10px 0;
+}
+
+#conditions {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+#wind {
+    font-size: 16px;
+}
+
+.weather-decoration {
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+footer {
+    margin-top: 25px;
+}
+
+@media (max-width: 750px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-header h1 {
+        font-size: 32px;
+    }
+
+    .weather-card {
+        min-height: 350px;
+    }
+
+    .forecast-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 400px) {
+    .forecast-grid {
+        grid-template-columns: 1fr;
+    }
+}

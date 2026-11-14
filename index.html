@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherWise | Weather Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js"></script>
+</head>
+<body>
+    <main class="dashboard">
+
+        <header class="dashboard-header">
+            <div>
+                <h1>✨☀️ Nimbus 4000 ☁️⚡️</h1>
+                <p>A little magic in every forecast</p>
+            </div>
+        </header>
+
+        <section class="search-section">
+            <label for="city">Choose your city:</label>
+            <select id="city">
+                <option value="34.0522,-118.2437">Los Angeles</option>
+                <option value="40.7128,-74.0060">New York</option>
+                <option value="41.8781,-87.6298">Chicago</option>
+                <option value="25.7617,-80.1918">Miami</option>
+            </select>
+            <button id="search-btn">Get Weather ✨</button>
+        </section>
+
+        <div class="dashboard-grid">
+
+            <div class="dashboard-left">
+
+                <section class="welcome-card">
+                    <p class="eyebrow">YOUR DAILY FORECAST</p>
+                    <h2>Hello! 🌷</h2>
+                    <p>Let's see what the skies have planned.</p>
+                </section>
+
+                <section class="forecast-section">
+                    <h2>Upcoming Forecast ☁️</h2>
+                    <div id="forecast" class="forecast-grid"></div>
+                </section>
+
+                <section class="details-card">
+                    <h2>Weather Details 🌈</h2>
+                    <p>Forecasts provided by the National Weather Service.</p>
+                </section>
+
+            </div>
+
+            <section class="weather-card">
+                <h2 id="city-name">Los Angeles</h2>
+                <div id="weather-icon">🌤️</div>
+                <p id="temperature">--°F</p>
+                <p id="conditions">Loading forecast...</p>
+                <p id="wind"></p>
+                <span class="weather-decoration">✨ ☁️ ✨</span>
+            </section>
+
+        </div>
+
+        <footer>
+            <p>Made with 💜 | Data: National Weather Service</p>
+        </footer>
+
+    </main>
+</body>
+</html>
